@@ -1,16 +1,22 @@
+<div style="background-color: #CEDB56;padding:15px;text-align:center">
+  <img src="../assets/EPAM_LOGO_Primary.png" width="15%/">
+  <h2 style="color: #263853;">RDIN - QR Scanner</h2>
+</div>
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-5 align-self-center">
-     <div class="p-3 border bg-light">
-       <div [class]="alertStyle" role="alert" >
-         <strong>{{message}}</strong>
-       </div>
+  <div class="row justify-content-md-center">
+    <div class="col-sm-5 align-self-center">
+      <div class="p-3 border bg-light">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="https://dpqr.herokuapp.com/">Back to Menu</a></li>
+            <li class="breadcrumb-item active" aria-current="page">QR Scanner</li>
+          </ol>
+        </nav>
+    </div>
     </div>
   </div>
-  
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-5 align-self-center">
+  <div class="row justify-content-md-center">
+    <div class="col-sm-5 align-self-center">
      <div class="p-3 border bg-light">
       <div *ngIf="isLoading; else examListTemplate">
         <ngx-spinner size="medium" [type]="typeSelected"></ngx-spinner>
@@ -21,6 +27,15 @@
      </div>
     </div>
   </div>
+  <div class="row justify-content-md-center">
+    <div class="col-sm-5 align-self-center">
+      <div class="p-3 border bg-light">
+        <div [class]="alertStyle" role="alert" >
+          <strong>{{message}}</strong>
+        </div>
+     </div>
+  </div>
 </div>
+<footer id="footer">  © copyright epam.com </footer>
 
 <router-outlet></router-outlet>
